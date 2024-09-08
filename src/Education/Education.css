@@ -1,0 +1,136 @@
+
+.heading {
+    font-size: 8rem;
+    text-align: center;
+    margin: 5rem 0;
+    color: var(--main-color);
+    animation: fadeIn 2s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.education {
+    padding: 100px 15px;
+}
+
+.education h2 {
+    margin-bottom: 5rem;
+    color: var(--main-color);
+}
+
+.timeline-items {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+}
+
+.timeline-items::before {
+    content: "";
+    position: absolute;
+    width: 5px;
+    height: 100%;
+    background-color: var(--main-color);
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.timeline-row {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 40px;
+}
+
+.timeline-item {
+    width: calc(50% - 100px); /* Adjust width to fit two items in a row and add space from the line */
+    position: relative;
+    background-color: #031515;
+    border-radius: 1rem;
+    box-shadow: 0 0 10px var(--main-color);
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    margin: 0; /* Remove margin to ensure full width */
+    height: 50vh;
+    box-shadow: 0 0 20px var(--main-color);
+}
+.timeline-item:hover {
+    transform: scale(1.05);
+   box-shadow: 0 0 25px var(--main-color),
+        0 0 25px var(--main-color),
+        0 0 25px var(--main-color);
+
+}
+
+.timeline-item:nth-child(odd) {
+    margin-right: 30px; /* Add space from the line */
+}
+
+.timeline-item:nth-child(even) {
+    margin-left: 30px; /* Add space from the line */
+}
+
+.timeline-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.timeline-content {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    width: 100%; /* Ensure content spans full width */
+}
+
+.timeline-date {
+    font-size: 20px;
+    font-weight: 800;
+    color: white;
+    margin: 6px 0 15px;
+}
+
+.timeline-content h3 {
+    font-size: 20px;
+    color: wheat;
+    margin: 0 0 10px;
+    font-weight: 500;
+    text-align: left;
+}
+
+.timeline-content p {
+    color: white;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 22px;
+    text-align: left;
+}
+
+
+
+::-webkit-scrollbar {
+    width: 15px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--main-color);
+}
+
+::-webkit-scrollbar-track {
+    background-color: var(--bg-color);
+    width: 50px;
+}
